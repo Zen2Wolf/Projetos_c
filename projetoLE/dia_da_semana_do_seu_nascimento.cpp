@@ -112,7 +112,7 @@ main(){
 	}
 	printf("repetir programa? sim ou nao\n");
 	scanf("%s", &continuar);
-	fflush(stdin);      // este comando é mt util, caso tenha espaço no scanf %s ele n pula outras perguntas!!!
+	fflush(stdin);
  }while((continuar == 's') || (continuar == 'S'));
 	system("pause");
 	return(0);
