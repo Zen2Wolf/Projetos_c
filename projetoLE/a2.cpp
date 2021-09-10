@@ -1,4 +1,3 @@
-// 1HID 2∫ bimestre-Enzo Dante, Isaac de Oliveira e Rafael Paroni.
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -11,32 +10,32 @@ setlocale(LC_ALL,"");
 resp = 1;
 
 while(resp == 1){
-	printf("Escolha um curso a qual o candidato far· o vestibulinho:\nDigite um numero que corresponda ah um curso:\n");
+	printf("Escolha um curso a qual o candidato far√° o vestibulinho:\nDigite um numero que corresponda ah um curso:\n");
 	printf("===============================================\n");
-	printf(" 1-Inform·tica / 2-AdminstraÁ„o / 3-EletrÙnica\n");
+	printf(" 1-Inform√°tica / 2-Adminstra√ß√£o / 3-Eletr√¥nica\n");
 	printf("===============================================\n");
 	scanf("%d", &curso); 
-	//curso a ser escolhido, se escolher errado ir· entrar no laÁo abaixo
+	//curso a ser escolhido, se escolher errado ir√° entrar no la√ßo abaixo
 	
 	while((curso < 1) || (curso > 3)){
-		printf("escolhe uma das opÁıes!!!\n");
+		printf("escolhe uma das op√ß√µes!!!\n");
 		printf("===============================================\n");
-		printf(" 1-Inform·tica / 2-AdminstraÁ„o / 3-EletrÙnica\n");
+		printf(" 1-Inform√°tica / 2-Adminstra√ß√£o / 3-Eletr√¥nica\n");
 		printf("===============================================\n");
 		scanf("%d", &curso);
 		system("cls");
 	}
-	NumeroDeIdentificacao++; //n˙mero de identificaÁ„o do candidato e total de candidatos
-	printf("Curso escolhido com sucesso! \nN˙mero de identificaÁ„o È: %d\n", NumeroDeIdentificacao);
+	NumeroDeIdentificacao++; //n√∫mero de identifica√ß√£o do candidato e total de candidatos
+	printf("Curso escolhido com sucesso! \nN√∫mero de identifica√ß√£o √©: %d\n", NumeroDeIdentificacao);
 	printf("================================================\n");
-	printf("n˙mero de identificaÁ„o: ");
+	printf("n√∫mero de identifica√ß√£o: ");
 	scanf("%d", &ni);
 	while(ni != NumeroDeIdentificacao){
-		printf("digite corretamente o n˙mero de identificaÁ„o:");
+		printf("digite corretamente o n√∫mero de identifica√ß√£o:");
 		scanf("%d", &ni);
 	}
 	fflush(stdin);
-	//abaixo dever· ser colocado as informaÁıes do candidato
+	//abaixo dever√° ser colocado as informa√ß√µes do candidato
 	
 	printf("nome do candidato: ");
     gets(nome);
@@ -53,12 +52,12 @@ while(resp == 1){
 	}
 	printf("================================================\n");
 	if((nota >= 7) && (idade > 18)){
-		//se a condiÁ„o for verdadeira, o candidato È aprovado, caso contr·rio È reprovado
+		//se a condi√ß√£o for verdadeira, o candidato √© aprovado, caso contr√°rio √© reprovado
 		printf("~~~~~~~~~~~~~~~~~~~~APROVADO~~~~~~~~~~~~~~~~~~~~\n");
 		printf("================================================\n"); 
 		
-			if(curso == 1){ 	/*se foi aprovado, ter· um teste para ver qual curso foi escolhido
-							 		e em seguida ir· verificar se a nota È a maior do curso escolhido */
+			if(curso == 1){ 	/*se foi aprovado, ter√° um teste para ver qual curso foi escolhido
+							 		e em seguida ir√° verificar se a nota √© a maior do curso escolhido */
 				if(nota > notai){
 					notai = nota;
 					strcpy(nomei, nome);
@@ -86,19 +85,19 @@ while(resp == 1){
 	}
 
 
-	printf("\ndeseja inscrever outro candidato? sim=1/n„o=2\n"); //mais candidatos poder„o ser adicionados, n„o se sabe quantos
+	printf("\ndeseja inscrever outro candidato? sim=1/n√£o=2\n"); //mais candidatos poder√£o ser adicionados, n√£o se sabe quantos
 	scanf("%d", &resp);
 	while((resp < 1) || (resp > 2)){
-		printf("use: sim=1/n„o=2\n");
+		printf("use: sim=1/n√£o=2\n");
 		scanf("%d", &resp);
 	}	
-	system("cls"); //deixar· a tela menos poluÌda, facilitando o entendimento do usu·rio
+	system("cls"); //deixar√° a tela menos polu√≠da, facilitando o entendimento do usu√°rio
 }
 porcentagem = (aprovados/NumeroDeIdentificacao) * 100;  //calculando a porcentagem de aprovados
-printf("Candidatos foram aprovados: %.0f\n", aprovados); //finalizando o programa mostrando as informaÁıes finalizadas
+printf("Candidatos foram aprovados: %.0f\n", aprovados); //finalizando o programa mostrando as informa√ß√µes finalizadas
 printf("Porcentagem de candidatos aprovados: %.1f%%\n", porcentagem);
 printf("melhores candidatos:\n================================\n");
-printf("Inform·tica:\nNome: %s \nNota: %.1f\n================================\n", nomei, notai);
-printf("AdminstraÁ„o:\nNome: %s \nNota: %.1f\n================================\n", nomea, notaA);
-printf("EletrÙnica:\nNome: %s \nNota: %.1f\n================================\n", nomee, notae);
+printf("Inform√°tica:\nNome: %s \nNota: %.1f\n================================\n", nomei, notai);
+printf("Adminstra√ß√£o:\nNome: %s \nNota: %.1f\n================================\n", nomea, notaA);
+printf("Eletr√¥nica:\nNome: %s \nNota: %.1f\n================================\n", nomee, notae);
 }
