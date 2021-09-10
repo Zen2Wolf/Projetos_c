@@ -1,2 +1,3 @@
 # Projetos_c
-atividade projeto em c
+aqui terá todos os projetos q fiz em c
+são projetos do curso técnico
