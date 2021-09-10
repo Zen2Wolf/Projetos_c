@@ -1,5 +1,3 @@
-//1HID   LE   Enzo Dante, Isaac de Oliveira e Rafael Paroni
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -114,7 +112,7 @@ main(){
 	}
 	printf("repetir programa? sim ou nao\n");
 	scanf("%s", &continuar);
-	fflush(stdin);      // este comando é mt util, caso tenha espaço no scanf %s ele n pula outras perguntas!!!
+	fflush(stdin);      // este comando Ã© mt util, caso tenha espaÃ§o no scanf %s ele n pula outras perguntas!!!
  }while((continuar == 's') || (continuar == 'S'));
 	system("pause");
 	return(0);
